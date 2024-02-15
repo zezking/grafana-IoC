@@ -11,11 +11,7 @@
     "rootDir": "../src",
     "baseUrl": "../src",
     "typeRoots": ["../node_modules/@types"],
-    "resolveJsonModule": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "types": ["reflect-metadata"],
-    "lib": ["es6", "dom"]
+    "resolveJsonModule": true
   },
   "ts-node": {
     "compilerOptions": {

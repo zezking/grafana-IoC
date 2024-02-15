@@ -4,7 +4,9 @@
   "name": "Grafana-Ioc",
   "id": "enze-grafanaioc-app",
   "info": {
-    "keywords": ["app"],
+    "keywords": [
+      "app"
+    ],
     "description": "Learn to apply ioc in app plugin",
     "author": {
       "name": "Enze"
@@ -46,6 +48,14 @@
       "type": "page",
       "name": "Page Four",
       "path": "/a/%PLUGIN_ID%/four",
+      "role": "Admin",
+      "addToNav": true,
+      "defaultNav": false
+    },
+    {
+      "type": "page",
+      "name": "Page IOC",
+      "path": "/a/%PLUGIN_ID%/ioc",
       "role": "Admin",
       "addToNav": true,
       "defaultNav": false

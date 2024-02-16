@@ -1,10 +1,10 @@
-import React from 'react';
-import { css } from '@emotion/css';
-import { GrafanaTheme2 } from '@grafana/data';
-import { container } from 'ioc';
-import { useStyles2 } from '@grafana/ui';
-import { PluginPage } from '@grafana/runtime';
-import { LoginForm } from '../components/LoginForm';
+import React from "react";
+import { css } from "@emotion/css";
+import { GrafanaTheme2 } from "@grafana/data";
+import { container } from "@ioc";
+import { useStyles2 } from "@grafana/ui";
+import { PluginPage } from "@grafana/runtime";
+import { LoginForm } from "../components/LoginForm";
 export function PageIOC() {
   const s = useStyles2(getStyles);
 
@@ -13,7 +13,10 @@ export function PageIOC() {
       <div>
         Login
         <div className={s.marginTop}>
-          <LoginForm model={container.get('LoginFormModel')} controller={container.get('LoginFormController')} />
+          <LoginForm
+            model={container.get("LoginFormModel")}
+            controller={container.get("LoginFormController")}
+          />
         </div>
       </div>
     </PluginPage>

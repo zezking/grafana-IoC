@@ -8,7 +8,7 @@ const config = async (env): Promise<Configuration> => {
   return merge(baseConfig, {
     resolve: {
       alias: {
-        ioc: path.resolve(
+        "@ioc": path.resolve(
           __dirname,
           path.join("src", "ioc", process.env.IOC ?? "default", "index.ts")
         ),
@@ -29,6 +29,10 @@ const config = async (env): Promise<Configuration> => {
                   dynamicImport: true,
                   orators: true,
                 },
+                // baseUrl: ["./"],
+                // paths: {
+                //   "ioc/*": ["./src/ioc/*"],
+                // },
               },
             },
           },

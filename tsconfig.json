@@ -4,6 +4,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "lib": ["es6", "dom"],
-    "typeRoots": ["./node_modules/@types", "./.config/types"]
+    "typeRoots": ["./node_modules/@types", "./.config/types"],
+    "paths": {
+      "@ioc": ["ioc/alternate"]
+    }
   }
 }

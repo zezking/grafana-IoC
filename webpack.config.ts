@@ -29,10 +29,6 @@ const config = async (env): Promise<Configuration> => {
                   dynamicImport: true,
                   orators: true,
                 },
-                // baseUrl: ["./"],
-                // paths: {
-                //   "ioc/*": ["./src/ioc/*"],
-                // },
               },
             },
           },

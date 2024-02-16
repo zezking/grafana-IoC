@@ -1,5 +1,5 @@
-import { Button, Field, Input } from '@grafana/ui';
-import React from 'react';
+import { Button, Field, Input } from "@grafana/ui";
+import React from "react";
 
 export interface LoginFormModel {
   getDefaultUser(): string;
@@ -22,7 +22,12 @@ export function LoginForm(props: LoginFormProps) {
   return (
     <>
       <Field label="Email" error="Name is required">
-        <Input required placeholder="Roger Waters" defaultValue={user} type="email" />
+        <Input
+          required
+          placeholder="Roger Waters"
+          defaultValue={user}
+          type="email"
+        />
       </Field>
       <Field label="password" error="Password is required">
         <Input required type="password" />

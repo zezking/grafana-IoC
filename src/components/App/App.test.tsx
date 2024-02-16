@@ -1,26 +1,26 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { AppRootProps, PluginType } from '@grafana/data';
-import { render, screen } from '@testing-library/react';
-import { App } from './App';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { AppRootProps, PluginType } from "@grafana/data";
+import { render, screen } from "@testing-library/react";
+import { App } from "./App";
 
-describe('Components/App', () => {
+describe("Components/App", () => {
   let props: AppRootProps;
 
   beforeEach(() => {
     jest.resetAllMocks();
 
     props = {
-      basename: 'a/sample-app',
+      basename: "a/sample-app",
       meta: {
-        id: 'sample-app',
-        name: 'Sample App',
+        id: "sample-app",
+        name: "Sample App",
         type: PluginType.app,
         enabled: true,
         jsonData: {},
       },
       query: {},
-      path: '',
+      path: "",
       onNavChanged: jest.fn(),
     } as unknown as AppRootProps;
   });

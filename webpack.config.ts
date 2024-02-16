@@ -1,14 +1,17 @@
-import type { Configuration } from 'webpack';
-import { merge } from 'webpack-merge';
-import grafanaConfig from './.config/webpack/webpack.config';
-import path from 'path';
+import type { Configuration } from "webpack";
+import { merge } from "webpack-merge";
+import grafanaConfig from "./.config/webpack/webpack.config";
+import path from "path";
 const config = async (env): Promise<Configuration> => {
   const baseConfig = await grafanaConfig(env);
 
   return merge(baseConfig, {
     resolve: {
       alias: {
-        ioc: path.resolve(__dirname, path.join('src', 'ioc', process.env.IOC ?? 'default', 'index')),
+        ioc: path.resolve(
+          __dirname,
+          path.join("src", "ioc", process.env.IOC ?? "default", "index.ts")
+        ),
       },
     },
     module: {
@@ -16,11 +19,11 @@ const config = async (env): Promise<Configuration> => {
         {
           test: /\.[tj]sx?$/,
           use: {
-            loader: 'swc-loader',
+            loader: "swc-loader",
             options: {
               jsc: {
                 parser: {
-                  syntax: 'typescript',
+                  syntax: "typescript",
                   tsx: true,
                   decorators: true,
                   dynamicImport: true,
@@ -32,6 +35,7 @@ const config = async (env): Promise<Configuration> => {
         },
       ],
     },
+    cache: false,
   });
 };
 
